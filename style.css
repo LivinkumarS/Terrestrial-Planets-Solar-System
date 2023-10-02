@@ -1,0 +1,237 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    overflow: hidden;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.space{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    position: relative;
+}
+.sun{
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background-image: url('sun.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: -200px;
+    left: -200px;
+}
+.mercury{
+    position: fixed;
+    width: 570px;
+    height: 570px;
+    border-radius: 50%;
+    border-color: white;
+    border-style: solid;
+    border-width: 0 0.5px 0 0;
+    top: -200px;
+    left: -200px;
+    border-style: 1px solid  white;
+    overflow: visible;
+    animation: orbit 4s linear infinite;
+}
+.mercury::before{
+    content: "";
+    position: absolute;
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    background-color: brown;
+    background: url('mercury-removebg-preview__1_-removebg-preview.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: -37.5px;
+    right: 250px;
+}
+.venus{
+    position: fixed;
+    width: 680px;
+    height: 680px;
+    border-radius: 50%;
+    border-color: white;
+    border-style: solid;
+    border-width: 0 0.5px 0 0;
+    top: -200px;
+    left: -200px;
+    border-style: 1px solid  white;
+    overflow: visible;
+    animation: orbit 6s linear infinite;
+
+}
+.venus::before{
+    content: "";
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background: url('venus-removebg-preview.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: -40px;
+    right: 250px;
+}
+ .earth{
+    position: fixed;
+    width: 850px;
+    height: 850px;
+    border-radius: 50%;
+    border-color: white;
+    border-style: solid;
+    border-width: 0 0.5px 0 0;
+    top: -200px;
+    left: -200px;
+    border-style: 1px solid  white;
+    overflow: visible;
+    animation: orbit 8s linear infinite;
+
+}
+.earth::before{
+    content: "";
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background: url('earth-removebg-preview.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: -45px;
+    right: 350px;
+}
+.moon{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border-color: white;
+    border-style: solid;
+    border-width: 0 0.5px 0 0;
+    bottom: -75px;
+    right: 318px;
+    border-style: 1px solid  white;
+    overflow: visible;
+    animation: orbit 2s linear infinite;
+
+}
+.moon::before{
+    content: "";
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: url('moon-removebg-preview.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: -12px;
+    right: 80px;
+}
+.mars{
+    position: fixed;
+    width: 1000px;
+    height: 1000px;
+    border-radius: 50%;
+    border-color: white;
+    border-style: solid;
+    border-width: 0 0.5px 0 0;
+    top: -200px;
+    left: -200px;
+    border-style: 1px solid  white;
+    overflow: visible;
+    animation: orbit 10s linear infinite;
+}
+.mars::before{
+    content: "";
+    position: absolute;
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    background: url('mars-removebg-preview.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: -30px;
+    right: 470px;
+}
+
+.about{
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 500px;
+    height: auto;
+    padding: 20px;
+    color: #fff;
+    animation: text 4s linear;
+}
+
+@keyframes orbit {
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes text {
+    0% {
+        opacity: 0%;
+    }
+    25% {
+        opacity: 25%;
+    }
+    50% {
+        opacity: 50%;
+    }
+    75%{
+        opacity: 75%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+.info1{
+    display: none;
+}
+
+@media (min-width:850px) and (max-width:1300px) {
+    .about{
+        display: none;
+    }
+}
+@media (max-width:849px) {
+    .space{
+        display: none;
+    }
+    .about{
+        display:none;
+    }
+    .info1{
+        display: contents;
+        width: 100%;
+        margin: 100px auto;
+        font-size: larger;
+        font-weight: bold;
+    }
+}
+.btn-nav{
+    width: auto;
+    height: auto;
+    background-color: aqua;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    margin: 20px auto;
+    font-weight: bolder;
+    font-size: 14x;
+    text-decoration: none;
+}
+.btn-nav:hover{
+    background-color: rgb(25, 0, 255);
+    color: #fff;
+    cursor: pointer;
+}
